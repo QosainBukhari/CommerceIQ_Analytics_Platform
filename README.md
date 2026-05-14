@@ -45,7 +45,9 @@ Charts, KPIs & Business Insights
 ```
 
 ---
-
+<p align="center">
+  <img src="docs/screenshots/dashboard.png" alt="CommerceIQ Dashboard" width="100%">
+</p>
 # Dataset
 
 Dataset Used:
