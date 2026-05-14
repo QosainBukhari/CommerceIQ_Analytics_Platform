@@ -1,0 +1,18 @@
+# Environment variables
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environments
+venv/
+commerceiq-venv/
+
+# Dataset files
+data/raw/
+
+# OS files
+.DS_Store
+Thumbs.db
