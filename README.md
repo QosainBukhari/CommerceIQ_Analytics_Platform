@@ -3,57 +3,66 @@
 
 CommerceIQ is a full-stack e-commerce analytics platform built using MySQL, FastAPI, React, Tailwind CSS, and Recharts.
 
-The project loads raw Brazilian e-commerce data into MySQL, performs advanced SQL analytics, exposes analytics APIs through FastAPI, and visualizes business insights in a modern React dashboard.
+The platform loads raw e-commerce data into a relational database, performs advanced SQL analytics, exposes analytics APIs through FastAPI, and visualizes business insights in an interactive React dashboard.
+
+This project demonstrates a complete end-to-end analytics engineering workflow used in real-world business intelligence systems.
 
 ---
 
-# Project Architecture
+# Project Overview
+
+CommerceIQ transforms raw Brazilian e-commerce transaction data into actionable business insights.
+
+The system includes:
+
+- ETL pipeline using Pandas
+- Relational database design in MySQL
+- Advanced SQL analytics
+- FastAPI backend APIs
+- React analytics dashboard
+- Interactive charts and KPI visualizations
+
+---
+
+# System Architecture
 
 ```text
-CSV Data
-   ↓
+CSV Dataset
+     ↓
 Pandas ETL Pipeline
-   ↓
-MySQL Database
-   ↓
+     ↓
+MySQL Relational Database
+     ↓
 SQL Analytics Queries
-   ↓
+     ↓
 FastAPI Backend APIs
-   ↓
+     ↓
+Axios API Requests
+     ↓
 React Frontend Dashboard
+     ↓
+Charts, KPIs & Business Insights
 ```
 
 ---
 
-# Features
+# Dataset
 
-## Backend Features
+Dataset Used:
+Brazilian E-Commerce Public Dataset by Olist
 
-- MySQL relational database
-- ETL pipeline using Pandas
-- SQL analytics queries
-- FastAPI REST APIs
-- Modular backend architecture
-- KPI analytics
-- Revenue analytics
-- Product analytics
-- Order analytics
-- Payment analytics
-- Seller analytics
-- Geography analytics
+Source:
+https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
 
-## Frontend Features
+The dataset contains:
 
-- React dashboard
-- Tailwind CSS styling
-- Responsive analytics UI
-- Recharts visualizations
-- KPI cards
-- Revenue charts
-- Data tables
-- Multi-page dashboard
-- Routing with React Router
-- Loading states
+- Customers
+- Orders
+- Products
+- Sellers
+- Payments
+- Reviews
+- Order Items
 
 ---
 
@@ -74,27 +83,96 @@ React Frontend Dashboard
 - Tailwind CSS
 - Axios
 - Recharts
+- React Router
 
-## Deployment
+## Deployment / DevOps
 
 - Docker
 - GitHub
 
 ---
 
+# Features
+
+## Backend Features
+
+### ETL Pipeline
+
+- CSV ingestion using Pandas
+- Schema filtering
+- Data loading into MySQL
+- Reusable ETL functions
+
+### SQL Analytics
+
+- Revenue analytics
+- Product analytics
+- Order analytics
+- Seller analytics
+- Geography analytics
+- Payment analytics
+- KPI calculations
+- Time-series analytics
+- Window functions
+- Aggregations
+- Multi-table joins
+
+### FastAPI Backend
+
+- REST API architecture
+- Modular routing
+- SQL query separation
+- JSON analytics responses
+- CORS support
+
+---
+
+## Frontend Features
+
+### Analytics Dashboard
+
+- KPI cards
+- Revenue charts
+- Interactive tables
+- Responsive layout
+- Loading states
+
+### Analytics Pages
+
+- Dashboard
+- Products Analytics
+- Categories Analytics
+- Orders Analytics
+- Payments Analytics
+- Sellers Analytics
+- Geography Analytics
+
+### UI Features
+
+- Tailwind CSS styling
+- Recharts visualizations
+- React Router navigation
+- Responsive dashboard UI
+
+---
+
 # Database Schema
 
-Main tables used:
+Main relational tables:
 
-- customers
-- orders
-- order_items
-- products
-- sellers
-- payments
-- reviews
+```text
+customers
+orders
+order_items
+products
+sellers
+payments
+reviews
+```
 
-Relationships:
+---
+
+# Relationships
 
 ```text
 customers
@@ -118,31 +196,143 @@ sellers
 
 # Analytics APIs
 
+## KPI APIs
+
 | Endpoint | Description |
 |---|---|
-| `/kpis` | Business KPIs |
-| `/monthly-revenue` | Monthly revenue trends |
-| `/monthly-growth` | Revenue growth analysis |
-| `/average-order-value` | AOV analytics |
-| `/top-products` | Top products |
-| `/top-categories` | Product category analytics |
-| `/daily-orders` | Daily order trends |
-| `/order-status` | Order status analytics |
-| `/payment-analysis` | Payment type analytics |
-| `/top-sellers` | Seller performance |
-| `/top-states` | Geography analytics |
+| `/kpis` | Overall business KPIs |
+| `/average-order-value` | Average order value |
 
 ---
 
-# Frontend Pages
+## Revenue Analytics
 
-- Dashboard
-- Products Analytics
-- Categories Analytics
-- Orders Analytics
-- Payments Analytics
-- Sellers Analytics
-- Geography Analytics
+| Endpoint | Description |
+|---|---|
+| `/monthly-revenue` | Monthly revenue trends |
+| `/monthly-growth` | Revenue growth analysis |
+
+---
+
+## Product Analytics
+
+| Endpoint | Description |
+|---|---|
+| `/top-products` | Top performing products |
+| `/top-categories` | Top product categories |
+
+---
+
+## Order Analytics
+
+| Endpoint | Description |
+|---|---|
+| `/daily-orders` | Daily order trends |
+| `/order-status` | Order status distribution |
+
+---
+
+## Payment Analytics
+
+| Endpoint | Description |
+|---|---|
+| `/payment-analysis` | Payment method analysis |
+
+---
+
+## Seller Analytics
+
+| Endpoint | Description |
+|---|---|
+| `/top-sellers` | Top marketplace sellers |
+
+---
+
+## Geography Analytics
+
+| Endpoint | Description |
+|---|---|
+| `/top-states` | Customer distribution by state |
+
+---
+
+# Frontend Dashboard Pages
+
+## Dashboard
+
+Displays:
+- Revenue KPIs
+- Revenue trends
+- Revenue table
+
+## Products Analytics
+
+Displays:
+- Top products
+- Product revenue charts
+
+## Categories Analytics
+
+Displays:
+- Category revenue analysis
+
+## Orders Analytics
+
+Displays:
+- Daily order trends
+- Operational analytics
+
+## Payments Analytics
+
+Displays:
+- Payment type distribution
+
+## Sellers Analytics
+
+Displays:
+- Seller performance metrics
+
+## Geography Analytics
+
+Displays:
+- Customer state distribution
+
+---
+
+# Project Structure
+
+```text
+commerceiq-analytics-platform/
+│
+├── backend/
+│   ├── app/
+│   │   ├── api/
+│   │   ├── database/
+│   │   ├── services/
+│   │   ├── schemas/
+│   │   └── main.py
+│   │
+│   ├── queries/
+│   ├── requirements.txt
+│   └── data_loader.py
+│
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   └── charts/
+│   │
+│   └── package.json
+│
+├── data/
+├── docs/
+├── .env
+├── .gitignore
+├── docker-compose.yml
+└── README.md
+```
 
 ---
 
@@ -151,7 +341,7 @@ sellers
 ## Clone Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/commerceiq-analytics-platform.git
+git clone https://github.com/QosainBukhari/CommerceIQ_Analytics_Platform.git
 ```
 
 ---
@@ -178,7 +368,7 @@ python -m venv commerceiq-venv
 commerceiq-venv\Scripts\activate
 ```
 
-### Mac/Linux
+### Linux / Mac
 
 ```bash
 source commerceiq-venv/bin/activate
@@ -190,7 +380,7 @@ source commerceiq-venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## Run backend
+## Run backend server
 
 ```bash
 uvicorn app.main:app --reload
@@ -218,16 +408,16 @@ cd frontend
 npm install
 ```
 
-## Run frontend
+## Start frontend
 
 ```bash
-npm start
+npm run dev
 ```
 
 Frontend runs at:
 
 ```text
-http://localhost:3000
+http://localhost:5173
 ```
 
 ---
@@ -246,48 +436,68 @@ DB_NAME=commerceiq_db
 
 ---
 
-# Dataset
+# Example API Endpoints
 
-Dataset used:
+```text
+http://127.0.0.1:8000/kpis
+http://127.0.0.1:8000/monthly-revenue?year=2018
+http://127.0.0.1:8000/top-products
+http://127.0.0.1:8000/payment-analysis
+```
 
-Brazilian E-Commerce Public Dataset by Olist
+---
 
-Source:
-https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
+# Dashboard Screenshots
+
+Add screenshots inside:
+
+```text
+docs/screenshots/
+```
+
+Example:
+
+```md
+![Dashboard](docs/screenshots/dashboard.png)
+```
 
 ---
 
 # Future Improvements
 
 - Docker deployment
-- Authentication
+- Cloud deployment
+- Authentication system
 - Query optimization
 - Redis caching
 - Advanced BI dashboards
-- Machine learning forecasting
-- Cloud deployment
+- Forecasting analytics
+- Machine learning integration
 
 ---
 
-# Screenshots
+# Learning Outcomes
 
-Add dashboard screenshots here after deployment.
+This project demonstrates understanding of:
 
-Example:
-
-```md
-![Dashboard Screenshot](docs/dashboard.png)
-```
+- Relational database design
+- ETL pipelines
+- SQL analytics
+- FastAPI backend engineering
+- React frontend dashboards
+- API integration
+- Business intelligence systems
+- Full-stack analytics architecture
 
 ---
 
 # Author
 
-Qosain
+Qosain Bukhari
 
 ---
 
 # License
 
-This project is for educational and portfolio purposes.
+This project is built for educational and portfolio purposes.
 ```
