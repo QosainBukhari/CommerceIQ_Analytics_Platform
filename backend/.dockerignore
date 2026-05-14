@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.pyo
+
+commerceiq-venv/
+
+.ipynb_checkpoints/
+
+data/
+
+notebooks/
+
+.env

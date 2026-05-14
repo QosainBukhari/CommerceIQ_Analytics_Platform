@@ -15,7 +15,7 @@ Full-Stack E-Commerce Analytics Platform
   <img src="https://img.shields.io/badge/React-20232A?logo=react">
   <img src="https://img.shields.io/badge/TailwindCSS-38BDF8?logo=tailwind-css&logoColor=white">
 </p>
-```md
+
 ---
 
 # Overview
