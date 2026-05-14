@@ -1,22 +1,21 @@
+<h1 align="center">CommerceIQ</h1>
+
+<p align="center">
+Full-Stack E-Commerce Analytics Platform
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/dashboard.png" width="100%" alt="CommerceIQ Dashboard"/>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.x-blue?logo=python">
+  <img src="https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white">
+  <img src="https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=white">
+  <img src="https://img.shields.io/badge/React-20232A?logo=react">
+  <img src="https://img.shields.io/badge/TailwindCSS-38BDF8?logo=tailwind-css&logoColor=white">
+</p>
 ```md
-<p align="center">
-  <img src="docs/screenshots/dashboard.png" alt="CommerceIQ Dashboard" width="100%">
-</p>
-
-<h1 align="center">CommerceIQ Analytics Platform</h1>
-
-<p align="center">
-Full-Stack E-Commerce Analytics Platform built with MySQL, FastAPI, React, Tailwind CSS, and Recharts.
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python">
-  <img src="https://img.shields.io/badge/FastAPI-Backend-green?style=for-the-badge&logo=fastapi">
-  <img src="https://img.shields.io/badge/MySQL-Database-orange?style=for-the-badge&logo=mysql">
-  <img src="https://img.shields.io/badge/React-Frontend-blue?style=for-the-badge&logo=react">
-  <img src="https://img.shields.io/badge/TailwindCSS-UI-38BDF8?style=for-the-badge&logo=tailwindcss">
-</p>
-
 ---
 
 # Overview
